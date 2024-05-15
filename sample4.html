@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Check</title>
+</head>
+<body>
+    <h1>Name Check</h1>
+    <button onclick="checkName()">Check Name</button>
+
+    <script>
+        function checkName() {
+            
+            var name = prompt("Enter actor name:");
+
+            if (name.toLowerCase() === "john") {
+             
+                alert("go to film")
+            } else {
+                alert("go to home");
+            }
+        }
+    </script>
+</body>
+</html>

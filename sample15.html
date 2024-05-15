@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         let arr2=[3,4,5,6]
+        function areaC(r){
+    return 3.14*r**2
+
+}
+
+function crFun(r){
+    return 2*3.14*r
+}
+
+function arrLis(arr,callback){
+    let l=arr.length;
+    let area=[]
+    for(let i=0;i<l;i++){
+        area.push(callback(arr[i]))
+    }
+    return area
+    
+}
+console.log(arrLis(arr2,areaC))
+console.log(arrLis(arr2,crFun))
+    </script>
+</body>
+</html>

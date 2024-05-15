@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Number Display</title>
+    <style>
+        .number-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 400px;
+        }
+
+        .number {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px;
+            font-size: 20px;
+            border: 1px solid black;
+        }
+
+        .even {
+            background-color: green;
+        }
+
+        .odd {
+            background-color: yellow;
+        }
+
+        .prime {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="number-containers" id="numberContainer"></div>
+
+    <script>
+        function isPrime(num) {
+            if (num <= 1) return false;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+
+        const container = document.getElementById('numberContainer');
+
+        for (let i = 1; i <= 5; i++) {
+            const numberDiv = document.createElement('div');
+            numberDiv.textContent = i;
+            numberDiv.className = 'number';
+
+            if (i % 2 === 0) {
+                numberDiv.classList.add('even');
+            } else {
+                numberDiv.classList.add('odd');
+            }
+
+            if (isPrime(i)) {
+                numberDiv.classList.add('prime')
+            }
+
+             container.appendChild(numberDiv);
+        }
+    </script>
+</body>
+
+</html>

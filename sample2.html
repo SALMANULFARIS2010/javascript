@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clock with Alert</title>
+<style>
+  #clock {
+    font-size: 24px;
+  }
+</style>
+</head>
+<body>
+<div id="clock"></div>
+
+<script>
+  // Function to update the clock display
+  function updateClock() {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    const timeString = `${hours}:${minutes}:${seconds}`;
+    document.getElementById('clock').textContent = timeString;
+
+    // Check if 10 seconds have elapsed and show alert
+    if (seconds % 10 === 0) {
+      alert('10 seconds have passed!');
+    }
+  }
+
+  // Update the clock every second
+  setInterval(updateClock, 1000);
+
+  // Initial update when the page loads
+  updateClock();
+</script>
+</body>
+</html>

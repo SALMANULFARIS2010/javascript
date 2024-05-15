@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       price=window.prompt("Enter the amount");
+    let gst=(price*2.5)/100;
+    let commondiscount=price*5/100
+    let discount;
+    let netprice;
+
+    if(price<=500){
+        discount=0;
+    }
+    else if(price<=1500){
+
+       discount=price*12/100;  
+    }
+    else if(price<=2500){
+        discount=price*16/100;
+    }
+    else if(price<=3500){
+        discount=price*22/100;
+   }
+   else if(price>=5000){
+    discount=price*50/100;
+
+   }
+   else{
+    alert("invalid input")
+   }
+   netprice=(price-discount-commondiscount)+gst;
+   alert(`NET PRICE IS ${netprice}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function getPersonInfo(personArray) {
+    for(const person of personArray){
+        console.log(`Fullname:${person.firstname} ${person.lastname}, Age: ${person.age}, Place: ${person.place}`)
+    }
+    // console.log(personArray.map(person => Fullname:${person.firstname} ${person.lastname}, Age: ${person.age}, Place: ${person.place})) ;
+}
+
+const person = [
+    {firstname: 'Fathima', lastname: "Fyrooz", age: "23", place: "Aluva"},
+    {firstname: "Asna", lastname: "Jabbar", age: "23", place: "Aluva"},
+    {firstname: "Sumi", lastname: "K S", age: "23", place: 'Perumbavoor'},
+    {firstname: "Saad", lastname: "A A", age: "24", place: "Kodugallor"},
+    {firstname: "Salman", lastname: "Faris", age: "23", place: "Thottumugam"}
+];
+
+ getPersonInfo(person);
+
+        
+    </script>
+    
+</body>
+</html>

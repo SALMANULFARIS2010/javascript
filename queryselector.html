@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <label>Candy Price</label>
+        <input type="text" name="CandyPrice" id="CandyPrice" />
+        <br/>
+        <br>
+        <label>Candy Discount</label>
+        <input type="text" name="CandyDiscount" id="CandyDiscount" />
+        <p class="pricedisplay">
+
+        </p>
+        
+    </p>
+    <p>
+    <button type="button" onclick="createPrice()">Create</button>
+    </p>
+    <div class="pricedisplay"></div>
+    <script>
+        function createPrice(){
+            let price=document.getElementById("CandyPrice");
+            let display=document.querySelector(".pricedisplay");
+            if(price.value!=""){
+                display.style.color="green"
+            display.style.border="2px solid blue"
+            display.innerHTML=price.value
+            }
+            else{
+                display.style.color="red"
+                display.innerHTML="empty"
+            }
+           
+            
+            
+
+
+        }
+    </script>
+</body>
+</html>
+</body>
+</html>
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <label>Candy Price</label>
+        <input type="text" name="CandyPrice" id="CandyPrice" />
+        <br/>
+        <br>
+        <label>Candy Discount</label>
+        <input type="text" name="CandyDiscount" id="CandyDiscount" />
+        <p class="pricedisplay">
+
+        </p>
+        
+    </p>
+    <p>
+        <button type="button" onclick="createPrice()">Create</button>
+    </p>
+    <div class="pricedisplay"></div>
+    <script>
+        function createPrice() {
+            let priceInput = document.getElementById("CandyPrice");
+            let discountInput = document.getElementById("CandyDiscount");
+            let display = document.querySelector(".pricedisplay");
+
+            let price = parseFloat(priceInput.value);
+            let discount = parseFloat(discountInput.value);
+
+            if (!isNaN(price) && !isNaN(discount)) {
+                let discountedPrice = price - (price * (discount / 100));
+                display.style.color = "green";
+                display.style.border = "2px solid blue";
+                display.innerHTML = "Discounted Price: $" + discountedPrice.toFixed(2);
+            } else {
+                display.style.color = "red";
+                display.innerHTML = "Invalid input";
+            }
+        }
+    </script>
+</body>
+</html> -->
